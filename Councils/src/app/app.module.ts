@@ -1,30 +1,42 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { NgModule } from '@angular/core';
+import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../providers/auth-service';
+import { RegisterPage } from '../pages/register/register';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseConfig } from './../environments/firebase/firebase-config';
+import { DisplayPage } from '../pages/display/display';
+import { CouncilLoginPage } from '../pages/councillogin/councillogin';
+import * as firebase from 'firebase';
+ import{ CreateAccountPage } from'../pages/create-account/create-account';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    LoginPage,
+    RegisterPage,
+    DisplayPage,
+    CouncilLoginPage,
+    CreateAccountPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FirebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    LoginPage,
+    RegisterPage,
+    DisplayPage,
+    CouncilLoginPage,
+    CreateAccountPage
+
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [AuthService]
 })
-export class AppModule {}
+export class AppModule { }

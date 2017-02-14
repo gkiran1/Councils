@@ -1,0 +1,39 @@
+<ion-content class="login-content" padding>
+    <ion-row >
+        <ion-col>
+            <h2>Log In</h2>
+            <p>Log in to your Councils account</p>
+        </ion-col>
+    </ion-row>
+
+    <div >
+        <form (ngSubmit)="login()" #registerForm="ngForm">
+            <ion-row>
+                <ion-col>
+                    <ion-list inset>
+                        <ion-item >
+                            <ion-label floating>Email</ion-label>
+                            <ion-input  type="text" name="email" [(ngModel)]="loginCredentials.email" ></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label floating>Password</ion-label>
+                            <ion-input type="password" name="password" [(ngModel)]="loginCredentials.password" ></ion-input>
+                        </ion-item>
+
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col class="signup-col">
+                    <button ion-button class="register-btn " block clear type="submit" >Log In</button>
+                    <button ion-button class="register-btn" block clear (click)="forgotPassword()">Forgot password?</button>
+                    <button ion-button class="register-btn" block clear (click)="noAccount">Don't have an account?</button>
+                </ion-col>
+            </ion-row>
+
+        </form>
+    </div>
+
+</ion-content>

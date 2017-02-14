@@ -1,0 +1,21 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch Sprint1
+# Your branch is up-to-date with 'origin/Sprint1'.
+#
+# Changes to be committed:
+#	modified:   Councils/src/app/app.component.ts
+#	modified:   Councils/src/app/app.module.ts
+#	new file:   Councils/src/environments/firebase/firebase-config.ts
+#	new file:   Councils/src/environments/firebase/firebase-service.ts
+#	new file:   Councils/src/pages/councillogin/councillogin.html
+#	new file:   Councils/src/pages/councillogin/councillogin.scss
+#	new file:   Councils/src/pages/councillogin/councillogin.ts
+#	new file:   Councils/src/pages/create-account/create-account.html
+#	new file:   Councils/src/pages/create-account/create-account.scss
+#	new file:   Councils/src/pages/create-account/create-account.ts
+#	new file:   Councils/src/providers/auth-service.ts
+#	new file:   Councils/src/providers/user.ts
+#
+
